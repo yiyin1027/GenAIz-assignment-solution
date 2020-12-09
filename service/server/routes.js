@@ -12,12 +12,8 @@ router.get("/test", async function (req, res) {
   let response = await fetch('https://nodejs-tech-assignment.herokuapp.com/projects?user_id=5fb5d7d5e77b3749e751906c');
   let json = await response.json();
 
-  console.log(json);
-
   let {_id, title, description} = json[0];
   let projects = {_id, title, description};
-
-  console.log(projects);
 
   let response2 = await fetch(`https://nodejs-tech-assignment.herokuapp.com/elements?project_id=${json.rootElement}`);
   let json2 = await response2.json();
