@@ -29,9 +29,10 @@ router.get("/test", async function (req, res) {
 
   projects = [projects];
 
-  projects = JSON.stringify(projects, null, " ")
-
+  projectStr = JSON.stringify(projects, null, " ")
+  
   console.log(projects);
+  console.log(projectStr);
   res.send(projects);
 });
 
